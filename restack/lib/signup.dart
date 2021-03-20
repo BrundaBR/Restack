@@ -1,27 +1,34 @@
 import 'package:flutter/material.dart';
 import 'package:restack/global.dart';
-import 'package:restack/main.dart';
-import 'package:restack/product_list.dart';
-import 'package:restack/profile.dart';
-import 'package:restack/signup.dart';
+import 'package:restack/signin.dart';
+// import 'package:shared_preferences/shared_preferences.dart';
 
-class SignIn extends StatefulWidget {
+
+class SignUp extends StatefulWidget {
   @override
-  _SignInState createState() => _SignInState();
+  _SignUpState createState() => _SignUpState();
 }
 
-class _SignInState extends State<SignIn> {
+class _SignUpState extends State<SignUp> {
+ 
+
   @override
   Widget build(BuildContext context) {
+    
     return SafeArea(
       child: new Scaffold(
+       
         body: new Column(
+          
+          
           crossAxisAlignment: CrossAxisAlignment.stretch,
           children: <Widget>[
+            
+            
             new Container(
               padding: EdgeInsets.fromLTRB(120.0, 50.0, 0, 0),
               child: Text(
-                "Sign In",
+                "Sign Up",
                 style: TextStyle(
                   fontSize: 30,
                   fontWeight: FontWeight.bold,
@@ -36,6 +43,22 @@ class _SignInState extends State<SignIn> {
                 children: <Widget>[
                   TextField(
                     decoration: InputDecoration(
+                      labelText: 'EMAIl',
+                      labelStyle: TextStyle(
+                        fontFamily: 'Montserrat',
+                        fontWeight: FontWeight.bold,
+                        color: lightgreen,
+                      ),
+                      focusedBorder: UnderlineInputBorder(
+                        borderSide: BorderSide(color: dark),
+                      ),
+                    ),
+                  ),
+                  SizedBox(
+                    height: 20,
+                  ),
+                  TextField(
+                    decoration: InputDecoration(
                       labelText: 'USERNAME',
                       labelStyle: TextStyle(
                         fontFamily: 'Montserrat',
@@ -45,18 +68,11 @@ class _SignInState extends State<SignIn> {
                       focusedBorder: UnderlineInputBorder(
                         borderSide: BorderSide(color: dark),
                       ),
-                      // prefixIcon: Icon(
-                      //   Icons.person,
-                      //   color: lightgreen,
-                      // ),
-                      //validate the inputs
                     ),
                   ),
-
                   SizedBox(
                     height: 20,
                   ),
-
                   TextField(
                     decoration: InputDecoration(
                       labelText: 'PASSWORD',
@@ -72,73 +88,45 @@ class _SignInState extends State<SignIn> {
                     obscureText: true,
                   ),
                   SizedBox(
-                    height: 20,
-                  ), //inorder to create between continers
+                    height: 40,
+                  ),
                   Container(
-                    alignment: Alignment(1.0, 0),
-                    padding: EdgeInsets.only(top: 15, left: 20),
-                    child: InkWell(
-                      child: Text(
-                        "Forgot Password",
-                        style: TextStyle(
-                          color: lightgreen,
-                          fontWeight: FontWeight.bold,
-                          fontFamily: 'Montserrat',
-                          decoration: TextDecoration.underline,
+                    height: 40,
+                    child: Material(
+                      borderRadius: BorderRadius.circular(20),
+                      shadowColor: darkgreen,
+                      color: darkgreen,
+                      elevation: 7.0,
+                      child: GestureDetector(
+                        onTap: () {},
+                        child: Center(
+                          child: Text(
+                            "SIGNUP",
+                            style: TextStyle(
+                              color: Colors.white,
+                              fontWeight: FontWeight.bold,
+                              fontFamily: 'Montserrat',
+                            ),
+                          ),
                         ),
                       ),
                     ),
                   ),
                   SizedBox(
-                    height: 40,
-                  ),
-                  
-                  SizedBox(
                     height: 20,
                   ),
-                 Container(
-   
-                        height: 60,
-                        child: Material(
-                          borderRadius: BorderRadius.circular(20),
-                          shadowColor: darkgreen,
-                          color: darkgreen,
-                          elevation: 7.0,
-                          child: GestureDetector(
-                            onTap: () {
-                               Navigator.push(
-                              context,
-                              MaterialPageRoute(builder: (context)=>ProductList()),
-                              );
-
-                            },
-                            child: Center(
-                              child: Text(
-                                "SIGNIN",
-                                style: TextStyle(
-                                  color: Colors.white,
-                                  fontWeight: FontWeight.bold,
-                                  fontFamily: 'Montserrat',
-                                ),
-                              ),
-                            ),
-                          ),
-                        ),
-                      ),
-       
-                 
-
                   Container(
                     padding: EdgeInsets.only(top: 15, left: 10),
                     child: GestureDetector(
-                      onTap: () {                           Navigator.pop(
+                      onTap: () {
+                        Navigator.push(
                           context,
-                          MaterialPageRoute(
-                              builder: (context) =>SignUp()),
-                        );},
+                          MaterialPageRoute(builder: (context) => SignIn()),
+                        );
+                      },
                       child: InkWell(
                         child: Text(
-                          "New to Restack?",
+                          "Already have an account?",
                           style: TextStyle(
                             color: lightestshade,
                             fontWeight: FontWeight.bold,

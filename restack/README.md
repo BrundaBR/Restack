@@ -35,15 +35,41 @@ main.dart includes signup form
 
 
 ## Tasks this week
-1. connect to backend
-    i. connection restframework 
-    ii. model creation for user
 
-    
-2. signup    [Done]
-3. signin
-4. product add and store
-5. comman template
-   
+1. create Django rest frame work
+restframework?
+-
+-
+-
+-
+
+2. connect to backend
+    i. connection restframework 
+3. signup   
+4. signin
+5. product add and store
+6. comman template
+
+## ui work
+1. Signup [Done]
+2. Signin [Done]
+
+
 ## Bug to fix
 1. overflow error
+
+
+# Summary
+1. http for get ,post requests from flutter
+2. 
+
+
+
+
+## Folder and its working
+1. model to create a the variables are used in a certain form or such.
+ex: in model/product_listing
+this file consist of the variables that are required in storing a product,or viewing a product.
+
+2. service/product_service
+ 
