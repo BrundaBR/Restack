@@ -7,13 +7,21 @@ class ProductForListing {
   DateTime timeline_from_date;
   DateTime timeline_to_date;
 
-  ProductForListing({
-    this.post_id,
-    this.username,
-    this.product_description,
-    this.product_image,
-    this.product_name,
-    this.timeline_from_date,
-    this.timeline_to_date
-  });
+  ProductForListing(
+      {this.post_id,
+      this.username,
+      this.product_description,
+      this.product_image,
+      this.product_name,
+      this.timeline_from_date,
+      this.timeline_to_date});
+}
+
+//model for signup
+class Signup {
+  String email;
+  String username;
+  String password;
+
+  Signup({this.email,this.username,this.password});
 }

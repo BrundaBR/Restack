@@ -1,6 +1,6 @@
 # restack
 
-A new Flutter project.
+A Lending flutter project.
 
 ## Getting Started
 
@@ -56,7 +56,7 @@ restframework?
 
 
 ## Bug to fix
-1. overflow error
+1. overflow error 149,137
 
 
 # Summary
@@ -70,6 +70,8 @@ restframework?
 1. model to create a the variables are used in a certain form or such.
 ex: in model/product_listing
 this file consist of the variables that are required in storing a product,or viewing a product.
+-the database table elements are to be declared here.
 
 2. service/product_service
+-
  

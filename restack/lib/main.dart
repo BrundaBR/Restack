@@ -1,9 +1,12 @@
 import 'package:flutter/material.dart';
 import 'package:get_it/get_it.dart';
+import 'package:provider/provider.dart';
 import 'package:restack/global.dart';
+import 'package:restack/product_list.dart';
 import 'package:restack/service/product_service.dart';
 import 'package:restack/signin.dart';
 import 'package:restack/signup.dart';
+import 'package:localstorage/localstorage.dart';
 
 //All routes of the project
 void setUpLocator() {
@@ -18,10 +21,12 @@ void main() {
 class MyApp extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
-    return MaterialApp(
-      debugShowCheckedModeBanner: false,
-      title: "Restack",
-      home: LandingPage(),
+   
+    return  MaterialApp(
+        debugShowCheckedModeBanner: false,
+        title: "Restack",
+        home: LandingPage(),
+      
     );
   }
 }
